@@ -1,0 +1,44 @@
+<script src="https://cdn.tailwindcss.com"></script>
+
+<nav class="bg-white shadow-md px-4 py-3">
+  <div class="max-w-7xl mx-auto flex justify-between items-center">
+    <div class="text-2xl font-bold text-blue-600">Blog App</div>
+
+    <div class="hidden md:flex space-x-6 items-center">
+      <a href="#" class="text-gray-700 hover:text-blue-600 font-medium">Home</a>
+      <a href="#" class="text-gray-700 hover:text-blue-600 font-medium">Add Blog</a>
+
+      <div class="relative group">
+        <button class="text-gray-700 hover:text-blue-600 font-medium focus:outline-none">
+          User Name
+        </button>
+        <div class="absolute left-0 mt-2 w-40 bg-white border rounded-lg shadow-md opacity-0 group-hover:opacity-100 invisible group-hover:visible transition duration-200 z-10">
+          <a href="#" class="block px-4 py-2 hover:bg-gray-100 text-sm text-gray-700">Logout</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="md:hidden">
+      <button id="menu-btn" class="text-gray-700 focus:outline-none">
+        ☰
+      </button>
+    </div>
+  </div>
+
+  <div id="mobile-menu" class="md:hidden hidden mt-2 space-y-2 px-4">
+    <a href="#" class="block text-gray-700 hover:text-blue-600">Home</a>
+    <a href="#" class="block text-gray-700 hover:text-blue-600">Add Blog</a>
+    <div class="border-t pt-2">
+      <p class="text-gray-600 font-medium mb-1">User Menu</p>
+      <a href="#" class="block text-sm text-gray-700 hover:text-blue-600">Logout</a>
+    </div>
+  </div>
+</nav>
+
+<script>
+  const menuBtn = document.getElementById("menu-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+</script>
